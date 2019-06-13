@@ -5,4 +5,9 @@ node{
         stage('Compile-Pakage'){
             sh 'mvn package'
         }
+        stage('Test'){
+                steps{
+                     sh 'mvn test'
+                }
+        }
 }
