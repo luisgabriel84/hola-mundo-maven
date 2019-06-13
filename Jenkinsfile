@@ -1,5 +1,9 @@
 pipeline {
     stages {
+        stage('Git checkout'){
+            git 'https://github.com/luisgabriel84/hola-mundo-maven.git'
+        }
+        
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
